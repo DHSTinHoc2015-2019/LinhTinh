@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hai hình vuông giao nhau</title>
+	<script type="application/javascript">
+		function draw(){
+			var canvas = document.getElementById('Vidu2');
+			// getContext() được sử dụng để có được ngữ cảnh rendering và các chức năng vẽ
+			if(canvas.getContext){
+				var ctx = canvas.getContext('2d');
+
+				ctx.fillStyle = "#C80000";
+				ctx.fillRect(20,20,200,200);
+
+				ctx.fillStyle = "#7F7FB1";
+				ctx.fillRect(50,50,200,200);
+			}
+		}
+	</script>
+</head>
+<body onload="draw();">
+	<canvas id="Vidu2" height="400" width="400"></canvas>
+</body>
+</html>

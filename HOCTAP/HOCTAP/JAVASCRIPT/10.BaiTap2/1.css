@@ -1,0 +1,29 @@
+*{margin: 0; padding: 0;}
+.chieuxuoi{
+	animation: xuoi 1s forwards!important;
+}
+@-webkit-keyframes xuoi{
+	0% {transform: translateX(0) translateY(0);}
+	25% {transform: translateX(200px) translateY(0);}
+	50% {transform: translateX(200px) translateY(200px);}
+	75% {transform: translateX(500px) translateY(200px);}
+	90% {transform: translateX(500px) translateY(500px);}
+	100% {transform: translateX(700px) translateY(500px);}
+}
+
+#khoicd{
+	animation: nguoc 1s forwards;
+}
+
+@-webkit-keyframes nguoc{
+	100% {transform: translateX(0) translateY(0);}
+	90% {transform: translateX(200px) translateY(0);}
+	75% {transform: translateX(200px) translateY(200px);}
+	50% {transform: translateX(500px) translateY(200px);}
+	25% {transform: translateX(500px) translateY(500px);}
+	0% {transform: translateX(700px) translateY(500px);}
+}
+
+.khongchuyendong{
+	animation: none!important;
+}

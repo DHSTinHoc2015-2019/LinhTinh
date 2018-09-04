@@ -1,0 +1,63 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+.noidungto {
+  height: 100%;
+  transition: 0.4s;
+  box-sizing: border-box;
+  padding-top: 10%;
+}
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+.list-group-item {
+  background: none;
+  color: white;
+  text-transform: uppercase;
+}
+.display-3.text-center {
+  font-size: 43px;
+  color: white;
+  padding: 20px;
+}
+.menutrai {
+  background: green;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: 0.4s;
+}
+.menutrai.vetrai{
+  transform: translateX(-100%);
+}
+.nut {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.den {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #0006;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+.denhienlen{
+  opacity: 1;
+  visibility: visible;
+}
+.dichphai{
+  transform: translateX(300px);
+}

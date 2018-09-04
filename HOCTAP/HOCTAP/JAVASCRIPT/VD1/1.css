@@ -1,0 +1,28 @@
+*{margin: 0; padding: 0; font-size: 14px;}
+#noidung{
+	/* position: relative; */
+ 	height: 100vh;
+	width: auto;
+	background-color: green;
+}
+
+.vitri{
+	position: fixed; 
+	margin-top: 50vh;
+}
+
+.chaytoi{
+	animation: toi 3s forwards;
+}
+@-moz-keyframes toi{
+	0% {transform: translateX(0);}
+	100% {transform: translateX(75em);}
+}
+
+.chaylui{
+	animation: lui 3s forwards;
+}
+@-moz-keyframes lui{
+	0% {transform: translateX(75em);}
+	100% {transform: translateX(0);}
+}

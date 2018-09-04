@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas bai 1</title>
+	<script type="text/javascript">
+		function draw(){
+			var canvas = document.getElementById('bai1');
+			if(canvas.getContext){
+				var ctx = canvas.getContext("2d");
+			}
+		}
+	</script>
+	<style type="text/css">
+		canvas {border: 2px solid black;}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="bai1" width="200" height="200"></canvas>
+</body>
+</html>

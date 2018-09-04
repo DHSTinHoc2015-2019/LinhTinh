@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function draw(){
+			var canvas = document.getElementById('HaiTamGiac');
+			if(canvas.getContext){
+
+				var ctx = canvas.getContext('2d');
+
+				//Vẽ hình tam giác với màu lấp đầy (fill)
+				ctx.beginPath();
+				ctx.moveTo(100, 50);
+				ctx.lineTo(30, 250);
+				ctx.lineTo(170, 250);
+				ctx.fill();
+
+				//Vẽ hình tam giác chỉ gồm các đường thẳng
+				ctx.beginPath();
+				ctx.moveTo(300, 50);
+				ctx.lineTo(230, 250);
+				ctx.lineTo(370, 250);
+				ctx.closePath();
+				ctx.stroke();
+
+			}
+		}
+		
+	</script>
+	<style>
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="HaiTamGiac" width="400" height="400">
+		
+	</canvas>
+</body>
+</html>

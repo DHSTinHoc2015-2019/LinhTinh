@@ -1,0 +1,1 @@
+﻿thêm "use strict" vào đầu javascript: toàn bộ biến trong js phải được khai báo

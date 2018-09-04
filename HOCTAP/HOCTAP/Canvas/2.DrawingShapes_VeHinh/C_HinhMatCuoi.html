@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// arc(x, y, bán kính, điểm bắt đàu, điểm kết thúc, true nếu vẽ ngược kim đồng hồ, false theo chiều kim đồng hồ)
+		function draw(){
+			var canvas = document.getElementById('MatCuoi');
+			if(canvas.getContext){
+
+				var ctx = canvas.getContext('2d');
+
+				ctx.beginPath();
+				ctx.arc(200, 200, 100, 0, Math.PI * 2, true);
+				ctx.moveTo(275, 200);
+				ctx.arc(200, 200, 75, 0, Math.PI, false);
+				ctx.moveTo(260, 180);
+				ctx.arc(250, 180, 10, 0, Math.PI * 2, true);
+				ctx.moveTo(160, 180);
+				ctx.arc(150, 180, 10, 0, Math.PI * 2, true);
+				ctx.stroke();
+			}
+		}
+		
+	</script>
+	<style>
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="MatCuoi" width="400" height="400">
+		
+	</canvas>
+</body>
+</html>

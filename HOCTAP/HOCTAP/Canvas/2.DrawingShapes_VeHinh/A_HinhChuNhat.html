@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// fillRect () vẽ một hình vuông màu đen lớn 300 pixel
+		// clearRect () xóa một hình vuông 200x200 pixel từ tâm
+		// strokeRect () để tạo một đường vạch hình chữ nhật 140x140 pixel bên trong hình vuông đã được xóa
+
+		function draw(){
+			var canvas = document.getElementById('HinhChuNhat');
+			if(canvas.getContext){
+				var ctx = canvas.getContext('2d');
+
+				ctx.fillRect(0, 0, 300, 300);
+				ctx.clearRect(50, 50, 200, 200);
+				ctx.strokeRect(80, 80, 140, 140);
+			}
+		}
+	</script>
+	<style>
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="HinhChuNhat" width="400" height="400">
+		
+	</canvas>
+</body>
+</html>

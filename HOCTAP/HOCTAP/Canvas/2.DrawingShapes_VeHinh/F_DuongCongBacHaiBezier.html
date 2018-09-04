@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		quadraticCurveTo (cp1x, cp1y, x, y)
+		// quadraticCurveTo(cp1x, cp1y, x, y)
+		// Vẽ đường cong Bézier bậc hai từ vị trí bút hiện tại đến điểm kết thúc được chỉ định bởi x và y, sử dụng điểm điều khiển được chỉ định bởi cp1x và cp1y.
+		// bezierCurveTo (cp1x, cp1y, cp2x, cp2y, x, y)
+		// Vẽ một đường cong Bézier khối từ vị trí bút hiện tại đến điểm kết thúc được xác định bởi x và y,
+		// sử dụng các điểm kiểm soát được chỉ định bởi (cp1x, cp1y) và (cp2x, cp2y).
+		function draw(){
+			var canvas = document.getElementById('DuongCongBacHaiBezier');
+			if(canvas.getContext){
+
+				var ctx = canvas.getContext('2d');
+
+				  // Quadratric curves example
+			    ctx.beginPath();
+			    ctx.moveTo(75, 25);
+			    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+			    ctx.quadraticCurveTo(25, 100, 50, 100);
+			    ctx.quadraticCurveTo(50, 120, 30, 125);
+			    ctx.quadraticCurveTo(60, 120, 65, 100);
+			    ctx.quadraticCurveTo(125, 100, 125, 62.5);
+			    ctx.quadraticCurveTo(125, 25, 75, 25);
+			    ctx.stroke();
+
+			}
+		}
+		
+	</script>
+	<style>
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="DuongCongBacHaiBezier" width="400" height="400">
+		
+	</canvas>
+</body>
+</html>

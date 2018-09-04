@@ -1,0 +1,21 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+.cautho{
+	font-weight: bold;
+	opacity: 0;
+	visibility: hidden;
+}
+.hienthi{
+	opacity: 1;
+	visibility: visible;
+}
+.hieuung{
+	animation: 1s chay forwards;
+}
+
+@-webkit-keyframes chay{
+	0% {transform: translateX(0);}
+	100%{transform: translateX(200px);}
+}

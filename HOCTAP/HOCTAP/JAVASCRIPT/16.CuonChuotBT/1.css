@@ -1,0 +1,30 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+.menu {
+  background: #b5dc62;
+  padding: 41px 0;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.phai a {
+  font-weight: normal;
+  font-size: 20px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.phai a:active;
+.phai a:visited{
+  text-decoration: none;
+}
+.menunholai{
+  padding: 10px 0;
+  font-size: 20px;
+
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	#myCanvas{
+		border: 1px solid red;
+	}
+</style>
+<body>
+	<button id="nhapChuot">Click</button>
+	<canvas id="myCanvas" height="150" width="1500"></canvas>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(){
+			var arr = [5, 4, 1, 6, 3];
+			var canvas = document.getElementById('myCanvas');
+			var ctx = canvas.getContext('2d');
+			
+			drawArray();
+
+			var y = document.getElementById('nhapChuot');
+
+			y.onclick =  function() {
+				var i = 0, j = 1;
+				setTimeout(function(){
+					draw(i, j);//console.log("đỏ");
+				}, 2000);
+
+				var siv = setInterval(function(){
+					//draw(i, j);
+					if(j >=  arr.length) {
+						i++; j = i + 1;
+						if(i >= arr.length - 1 ) {
+							clearInterval(siv);
+							ctx.clearRect(0, 0, canvas.width, canvas.height);
+							drawArray();
+						}
+						else{
+							draw(i, j); //console.log("đỏ");
+							if(arr[i] > arr[j]){
+								var temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;
+							}
+							setTimeout(function(){
+								drawafter(i, j);// console.log("xanh");
+								j++;
+							}, 2000);
+							//console.log("arr[" + i + "] = " + arr[i] + "   arr[" + j + "] = " +  arr[j]);
+						}
+					}
+					else {
+						if(i >= arr.length - 1 ) {
+							clearInterval(siv);
+							ctx.clearRect(0, 0, canvas.width, canvas.height);
+							drawArray();
+						}
+						draw(i, j); //console.log("đỏ");
+						if(arr[i] > arr[j]){
+							var temp = arr[i]; arr[i] = arr[j]; arr[j] = temp;
+						}
+						setTimeout(function(){
+							drawafter(i, j);// console.log("xanh");
+							j++;
+						}, 2000);
+						//console.log("arr[" + i + "] = " + arr[i] + "   arr[" + j + "] = " +  arr[j]);
+					}
+					
+					console.log(arr);
+				}, 4000);
+				
+			};
+
+			function draw(a, b){
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				for (var i = 0; i < arr.length; i++) {
+					if(i == a || i == b) nenDoChuTrang(i);
+					else nenVangChuDen(i);	
+				}
+			}
+
+			function drawArray(){
+				for (var m = 0; m < arr.length; m++) {
+					nenVangChuDen(m);
+				}
+			}
+
+			function drawafter(a, b){
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				for (var m = 0; m < arr.length; m++) {
+					if(m == a || m == b) nenXanhChuTrang(m);
+					else nenVangChuDen(m);
+				}
+			}
+
+			function nenDoChuTrang(m){
+				ctx.beginPath();
+				ctx.moveTo(60 + 70 * m, 70);
+				ctx.fillStyle = "red";
+				ctx.arc(60 + 70 * m, 70, 30, 0, 2 * Math.PI, true);
+				ctx.fill();
+				ctx.fillStyle = "white";
+				ctx.font = "bold 28px Time New Romman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[m].toString(), 60 + 70 * m, 77);
+			}
+
+			function nenXanhChuTrang(m){
+				ctx.beginPath();
+				ctx.moveTo(60 + 70 * m, 70);
+				ctx.fillStyle = "blue";
+				ctx.arc(60 + 70 * m, 70, 30, 0, 2 * Math.PI, true);
+				ctx.fill();
+				ctx.fillStyle = "white";
+				ctx.font = "bold 28px Time New Romman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[m].toString(), 60 + 70 * m, 77);
+			}
+
+			function nenVangChuDen(m){
+				ctx.beginPath();
+				ctx.moveTo(60 + 70 * m, 70);
+				ctx.fillStyle = "yellow";
+				ctx.arc(60 + 70 * m, 70, 30, 0, 2 * Math.PI, true);
+				ctx.fill();
+				ctx.fillStyle = "black";
+				ctx.font = "bold 28px Time New Romman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[m].toString(), 60 + 70 * m, 77);
+			}
+		},false);
+	</script>
+</body>
+</html>
