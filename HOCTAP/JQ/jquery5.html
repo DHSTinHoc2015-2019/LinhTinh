@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Học jQuery</title>
+	<meta charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <p id="para">Phương thức text() trả về nội dung văn bản bên trong phần tử</p>
+    <button>Click me</button>
+
+    <script type="text/javascript">
+        $(function(){
+            $("button").click(function(e) {
+                $("#para").text("Nội dung đã thay đổi");
+            });
+        });
+    </script>
+</body>
+</html>
