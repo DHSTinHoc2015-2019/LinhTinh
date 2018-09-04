@@ -1,0 +1,24 @@
+bootstrap 4 snippets
+C Improved
+Canvas Snippets
+Codeigniter 2 modelController
+Codeignite Snippets
+Codeignite Utilities
+Color Highlighter
+Console API Snippets(Javascript)
+CSS snippets
+CSS3
+DotNetComments
+Emmet
+Emmet css snippets
+HTML snippets
+Javascript & NodeJS snippets
+Javascript snippets
+Jquery
+Material Monokai
+Materialize
+phpSpec Snippet
+PyV8
+SideBarEnhancements
+SublimeCodeIntel
+View In Brower
